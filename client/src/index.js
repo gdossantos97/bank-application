@@ -14,6 +14,7 @@ import { useState, createContext } from 'react';
 import Balance from "./pages/balance";
 import AllData from "./pages/alldata";
 import Withdraw from "./pages/withdraw";
+import Dashboard from "./pages/dashboard/Dashboard";
 import { Box } from "@mui/material";
 
 
@@ -43,6 +44,8 @@ function App () {
         <Route path="/Withdraw" element={<Withdraw />} />
         <Route path="/Balance" element={<Balance />} />
         <Route path="/AllData" element={<AllData />} />
+        <Route path="/Dashboard" element={<Dashboard />} />
+
       </Routes>
       </div>
       </UserContext.Provider>
