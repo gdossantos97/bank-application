@@ -4,7 +4,7 @@ import { Provider } from 'react-redux';
 import {
   BrowserRouter,
   Routes,
-  Route,
+  Route
 } from "react-router-dom";
 import Login from "./pages/login";
 import Register from "./pages/register";
@@ -14,8 +14,7 @@ import { useState, createContext } from 'react';
 import Balance from "./pages/balance";
 import AllData from "./pages/alldata";
 import Withdraw from "./pages/withdraw";
-import { Box } from "@mui/material";
-
+import Dashboard from "./pages/dashboard/Dashboard";
 
 
 
@@ -31,11 +30,18 @@ function App () {
   return (
     <div>
     <BrowserRouter>
-    <Box > 
-    <Navigation /> 
     <UserContext.Provider value={value} balance={balance} setBalance={setBalance}>
-      <div>
+      <>
+    <Routes>
+      
+    <Route path="/Dashboard" element={<Dashboard />} />
+    
+    </Routes>
+    </>
+    <Navigation /> 
+     
       <Routes>
+
         <Route exact path="/" element={<Register /> } />
         <Route path="/Register" element={<Register />} />
         <Route path="/Login" element={<Login />} />
@@ -43,10 +49,10 @@ function App () {
         <Route path="/Withdraw" element={<Withdraw />} />
         <Route path="/Balance" element={<Balance />} />
         <Route path="/AllData" element={<AllData />} />
+
       </Routes>
-      </div>
+
       </UserContext.Provider>
-    </Box>
     </BrowserRouter>
     </div>
   );

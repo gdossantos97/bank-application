@@ -27,7 +27,7 @@ const Navigation = () => {
   const { user } = useSelector((state) => state.auth)
 
 
-  const pages = user ? ['Deposit', 'Withdraw', 'Alldata', 'Balance'] : ['Register', 'Login'];
+  const pages = user ? ['Deposit', 'Withdraw', 'Alldata', 'Balance', 'Dashboard'] : ['Register', 'Login'];
 
   const settings = user ? ['Logout'] : [''];
   
@@ -67,7 +67,7 @@ const Navigation = () => {
             variant="h6"
             noWrap
             component="a"
-            href="/"
+            href="#"
             sx={{
               mr: 2,
               display: { xs: 'none', md: 'flex' },
@@ -128,7 +128,7 @@ const Navigation = () => {
             variant="h5"
             noWrap
             component="a"
-            href=""
+            href="#"
             sx={{
               mr: 2,
               display: { xs: 'flex', md: 'none' },

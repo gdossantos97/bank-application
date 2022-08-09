@@ -82,6 +82,7 @@ export default function Register() {
       return false
     } else if (password.length < 8) {
       setError('Password must be longer than 8 characters!');
+      alert('Password must be longer than 8 characters!')
       setTimeout(() => setError(''), 3000);
       return false;
     } else {

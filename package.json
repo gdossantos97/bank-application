@@ -28,6 +28,7 @@
     "mongodb": "^4.7.0",
     "mongoose": "^6.4.0",
     "react-google-login": "^5.2.2",
+    "recharts": "^2.1.13",
     "redux": "^4.2.0"
   },
   "devDependencies": {
