@@ -13,6 +13,7 @@ Please note that this project is a WIP and you may experience some bugs...
 * Put a password checker 
 * Fix some front-end bugs with login/register pages
 * Fix JWT auth issues and routing
+* Create darkmode
 
 
 // Known Bugs
